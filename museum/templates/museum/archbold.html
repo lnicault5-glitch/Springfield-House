@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Dana Archbold – Biography</title>
+
+    <!-- ✅ Proper static link to your CSS -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'visit' %}">Visit</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'art' %}">Art</a>
+        <a href="{% url 'archbold' %}" class="active">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Archbold Hero Section -->
+    <section class="archbold-hero">
+      <img
+        src="{% static 'museum/images/archbold.jpg' %}"
+        alt="John Dana Archbold"
+        class="archbold-photo"
+      />
+      <div class="archbold-quote">
+        <h2>John Dana Archbold (1910 – 1993)</h2>
+        <blockquote>“One step over and beyond”</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <p>
+        <strong>John Dana Archbold</strong> arrived in Dominica in the early
+        20th century and soon became known for his vision, generosity, and deep
+        connection to the island. In 1935 he purchased the
+        <strong>Springfield property</strong> from the Bellot family and a few
+        years later built his home there. His residence, today known as
+        <strong>Springfield House</strong>, was filled with carefully chosen
+        antiques, many dating back to the 19th century, and remains preserved as
+        part of the museum collection.
+      </p>
+
+      <h3>Philanthropy & Vision</h3>
+      <p>
+        Archbold was more than a landowner: he was a
+        <strong>philanthropist</strong> whose work emphasized
+        <strong>education, equality, and generosity</strong>. He supported
+        schools, encouraged opportunities for local people, and believed in the
+        resilience and potential of Dominica’s citizens. His contributions
+        earned him recognition and respect both on the island and abroad.
+      </p>
+
+      <h3>Biodiversity & Research</h3>
+      <p>
+        In the early 1960s, Archbold co-sponsored the
+        <strong
+          >Bredin-Archbold-Smithsonian Biological Survey of Dominica</strong
+        >, a landmark scientific expedition carried out in partnership with
+        naturalist J. Bruce Bredin and the Smithsonian Institution. The survey
+        documented the island’s insects, plants, and forest ecosystems, with
+        fieldwork spanning diverse sites such as the Layou River, Grand Savanna,
+        Portsmouth, Grand Bay, Freshwater Lake, and the Central Forest Reserve.
+        The work expanded knowledge of Dominica’s biodiversity, contributed to
+        the description of new species, and produced scientific reports that are
+        still referenced today.
+      </p>
+
+      <!-- Education, Career & Honors -->
+      <section class="archbold-honors">
+        <h3>Education, Career & Honors</h3>
+
+        <p>
+          John Dana Archbold’s life bridged engineering, exploration, and
+          philanthropy. Educated at <strong>The Choate School</strong> in
+          Connecticut, the <strong>University of Geneva</strong>, and
+          <strong>Princeton University</strong>, he went on to study mechanical
+          engineering and patented a rotary internal-combustion engine early in
+          his career. During World War II, he served as a naval officer in
+          Southeast Asia, later attached to Calcutta as a security officer.
+        </p>
+
+        <p>
+          In 1989, Clemson University conferred upon him an
+          <strong>Honorary Doctor of Laws</strong> in recognition of his
+          contributions to science, conservation, and international
+          collaboration. That same year, he donated a large portion of his
+          beloved <strong>Springfield Plantation</strong> — 200 acres on
+          Dominica — to Clemson as the foundation for the
+          <strong>Archbold Tropical Research Center (ATREC)</strong>, a
+          consortium of ten universities and agencies dedicated to research and
+          education in tropical ecosystems. This ensured that his estate served
+          not just his family but the wider Dominican community, reinforcing his
+          reputation as a man who saw beyond his own lifetime.
+        </p>
+
+        <p>
+          His lifelong commitment to protecting natural heritage and supporting
+          education was recognized worldwide. He received the
+          <strong>Order of the British Empire (OBE)</strong>, Dominica’s
+          <strong>Sisserou Award</strong> for public service, the
+          <strong>Order of St. Olaf (King of Norway)</strong>, and additional
+          international distinctions for his devotion to research and cultural
+          understanding.
+        </p>
+
+        <figure>
+          <img
+            src="{% static 'museum/images/IMG_0785.jpeg' %}"
+            alt="Clemson University Honorary Degree awarded to John D. Archbold"
+          />
+          <figcaption>
+            Clemson University Honorary Doctor of Laws Plaque (1989) —
+            acknowledging Archbold’s lifetime dedication to engineering,
+            conservation, and education.
+          </figcaption>
+        </figure>
+      </section>
+
+      <p class="transition">
+        As Archbold’s life entered its final decades, his attention turned
+        toward institutional support and documentation — ensuring that his
+        vision for Springfield and Dominica’s natural heritage would continue
+        beyond his time.
+      </p>
+
+      <!-- Archbold Later Years -->
+      <section class="archbold-later">
+        <h3>The Later Years</h3>
+        <figure>
+          <img
+            src="{% static 'museum/images/archbold-older.jpg' %}"
+            alt="John Dana Archbold reviewing documents, later years"
+          />
+          <figcaption>
+            In his later years, Archbold remained deeply engaged in research and
+            philanthropy, reviewing reports and supporting the work of
+            scientific institutions that carried his vision forward.
+          </figcaption>
+        </figure>
+      </section>
+
+      <h3>Legacy</h3>
+      <p>
+        Today, John Dana Archbold is remembered not only for his home and art
+        collection, but for the spirit of generosity and imagination he left
+        behind. Springfield House, once private, is now open to the public —
+        carrying forward his vision of heritage, resilience, and shared
+        community.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House – Museum &amp; Nature Walk</p>
+    </footer>
+  </body>
+</html>

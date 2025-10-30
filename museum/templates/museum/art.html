@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Art of Springfield House</title>
+
+    <!-- ✅ Correct static reference -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'visit' %}">Visit</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'art' %}" class="active">Art</a>
+        <a href="{% url 'archbold' %}">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>The Art Collection</h2>
+      <p>
+        Among Springfield’s greatest treasures is its
+        <strong>art collection</strong>, assembled by
+        <a href="{% url 'archbold' %}"><strong>John Dana Archbold</strong></a
+        >. Beside a few older prints, the collection includes around
+        <strong>15 oil paintings</strong> created during the 1980s and 1990s by
+        Dominican artists. These works capture scenes of island life, rural
+        traditions, and Dominica’s landscapes.
+      </p>
+
+      <p>
+        Highlights include early paintings by internationally acclaimed artist
+        <strong>Earl Etienne</strong>, alongside works by Darius, Louison, K.
+        Royer, and others. Together, the collection reflects both the artistic
+        talent of Dominica and Mr Archbold’s commitment to preserving and
+        celebrating it.
+      </p>
+
+      <h3>Gallery Preview</h3>
+      <p>
+        (Images coming soon — this space will feature photos of the paintings
+        with captions about each artist and subject.)
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House – Museum &amp; Nature Walk</p>
+    </footer>
+  </body>
+</html>

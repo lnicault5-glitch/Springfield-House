@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Springfield House – History</title>
+
+    <!-- ✅ Correct static CSS reference -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'visit' %}">Visit</a>
+        <a href="{% url 'history' %}" class="active">History</a>
+        <a href="{% url 'art' %}">Art</a>
+        <a href="{% url 'archbold' %}">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <section class="history-section travelbook">
+      <h2>Springfield in 1948</h2>
+      <figure class="history-figure">
+        <img
+          src="{% static 'museum/images/springfield1948.jpeg' %}"
+          alt="Springfield House in 1948, from Islands to Windward"
+        />
+        <figcaption>
+          Springfield House as it appeared in Carlton Mitchell’s 1948 travel
+          book <em>Islands to Windward</em>, shortly after John Dana Archbold
+          acquired it from the Bellot family.
+        </figcaption>
+      </figure>
+
+      <p>
+        In his 1948 travel book <em>Islands to Windward</em>, sailor and writer
+        Carlton Mitchell described Springfield as a lively gathering place. At
+        that time, the estate was a modest plantation house above the Roseau
+        Valley, not yet transformed into the larger residence and guest
+        facilities Archbold would later build.
+      </p>
+
+      <!-- Construction Glimpse -->
+      <section class="construction-glimpse">
+        <figure>
+          <img
+            src="{% static 'museum/images/earlyconstruction.jpg' %}"
+            alt="Building Springfield House, ca. 1940s"
+          />
+          <figcaption>
+            Early construction of Springfield House, around the 1940s — stone
+            and timber coming together on the hillside above the Roseau Valley.
+          </figcaption>
+        </figure>
+      </section>
+
+      <p>
+        Mitchell recalled sailors, travelers, and locals climbing the hill to
+        Springfield to share in John’s hospitality. On Saturday evenings the
+        estate filled with music:
+      </p>
+
+      <blockquote>
+        <p>
+          “The band assembled on the terrace after dinner. The melody was
+          carried by a lone flutist, joined by drums stretched from wooden tubs,
+          a triangle struck with a valve stem, guitars, a hollow bamboo
+          ‘boom-boom,’ and a rattling tin shak-shak. The rhythm was irresistible
+          — heads bobbed, hands clapped, and laughter carried into the night.”
+        </p>
+      </blockquote>
+
+      <p>
+        This scene shows Springfield’s early role as a
+        <strong>social and cultural crossroads</strong> — a place of music,
+        fellowship, and welcome that laid the foundation for its later chapters
+        in science and philanthropy.
+      </p>
+    </section>
+
+    <section>
+      <h2>The Story of Springfield</h2>
+      <p>
+        The Springfield property has deep roots in Dominican history. Originally
+        owned by the <strong>Bellot family</strong>, the land was later
+        purchased in 1935 by
+        <a href="{% url 'archbold' %}"><strong>John Dana Archbold</strong></a
+        >, whose vision and philanthropy shaped much of its legacy. In the
+        1940s, Archbold constructed <strong>Springfield House</strong>, now
+        preserved as a museum.
+      </p>
+
+      <section class="history-bridge">
+        <p>
+          In the world that greeted Archbold, Dominica’s valleys were dense with
+          fern and cocoa, the air alive with birdsong and the scent of rain.
+          Writers like Rosita Forbes spoke of it as an “island in the sun,” a
+          name that still feels true today.
+        </p>
+      </section>
+
+      <p>
+        Beside the main residence, Mr Archbold built the
+        <strong>Springfield Guest House</strong>, which for many years served as
+        one of Dominica’s most sought-after places to stay. Known for its
+        <strong>classic atmosphere and old-world charm</strong>, the Guest House
+        was a lively hub of community life, even hosting weddings and social
+        gatherings. Following his passion for education and development, John
+        Dana Archbold contributed to the creation of the
+        <strong>Archbold Tropical Research and Education Center</strong>. The
+        main house, however, remained private — until now.
+      </p>
+
+      <section class="spring1970">
+        <figure>
+          <img
+            src="{% static 'museum/images/spring1970.jpg' %}"
+            alt="Springfield in 1970"
+          />
+          <figcaption>
+            Springfield House in the 1970s — the estate fully established,
+            surrounded by lush hillside gardens and the maturing guest house
+            below.
+          </figcaption>
+        </figure>
+      </section>
+
+      <p>
+        Today, Springfield House is being carefully restored and opened to the
+        public for the first time. Visitors can view the preserved rooms,
+        antique furnishings, art collections, and the surrounding gardens, while
+        also enjoying a dramatic viewpoint of the Caribbean Sea over what was
+        once a banana and grapefruit plantation.
+      </p>
+
+      <p>
+        Together, Springfield House and the Guest House are
+        <strong>cultural landmarks</strong> whose preservation is in the
+        national interest. They embody Dominica’s resilience, community spirit,
+        and the intertwining of personal stories with the island’s wider
+        history.
+      </p>
+
+      <h3>Furnishings with a Story</h3>
+      <p>
+        Mr Archbold brought and collected <strong>antique furniture</strong> —
+        some imported, some commissioned, and many purchased from other estates.
+        From <strong>South Chilton Estate</strong> (through figures such as
+        <strong>Mr. Henderson</strong>) to acquisitions from
+        <strong>Maggie Nicholls of Kingsland House</strong>, each piece carries
+        a thread of Dominican history. As Kingsland House itself had belonged to
+        <strong>Dr. John Imray (1811–1880)</strong>, a renowned Scottish
+        scientist, some furniture may well trace its origins back to Europe,
+        reflecting both local and international heritage.
+      </p>
+
+      <h3>The Art Collection</h3>
+      <p>
+        Perhaps the most remarkable treasure of Springfield House is its
+        <strong>art collection</strong>. Alongside a few older prints, Archbold
+        assembled numerous <strong>oil paintings</strong>, most created during
+        the 1980s and 1990s by Dominican artists. Among them are early works by
+        internationally acclaimed painter <strong>Earl Etienne</strong>, as well
+        as pieces by Darius, Louison, K. Royer, and others. These works depict
+        traditional life, community scenes, and the island’s landscapes.
+      </p>
+
+      <p>
+        Together, these paintings form a vivid portrait of Dominica’s culture
+        and memory, adding depth to the museum experience and confirming
+        Springfield’s role as a guardian of national heritage.
+      </p>
+
+      <p>
+        These collections make Springfield more than a home — they turn it into
+        a <strong>living museum</strong>, where each object is part of a broader
+        story of resilience, exchange, and cultural memory.
+      </p>
+
+      <h3>People of Springfield</h3>
+      <p>
+        The story of Springfield also belongs to its people.
+        <strong>Cecilia</strong>, Archbold’s personal chef, cared for him in the
+        last years of his life. <strong>Desmond Eusell</strong>, born on the
+        property, still tends the grounds today with his sons.
+        <strong>Mr. Bruno</strong>, once manager of Springfield, was able to
+        purchase land in Sylvania and build a family home thanks to his work
+        here. <strong>Mrs. Alexander</strong> celebrated her wedding at
+        Springfield in 1998, continuing the tradition of the house as a place of
+        family, community, and cherished memories.
+      </p>
+
+      <p>
+        Their lives and celebrations are part of Springfield’s legacy of
+        opportunity, resilience, and belonging — proof that the house is not
+        only a historic landmark, but a living part of Dominican life.
+      </p>
+
+      <!-- Timeline -->
+      <p>
+        <em
+          >Springfield’s story unfolds across decades — a journey of vision,
+          resilience, and renewal.</em
+        >
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-entry">
+          <h4>1935</h4>
+          <p>
+            Mr Archbold purchases the Springfield property from the Bellot
+            family.
+          </p>
+        </div>
+        <div class="timeline-entry">
+          <h4>1940s</h4>
+          <p>
+            Springfield House built by Mr Archbold, furnished with antiques from
+            across Dominica and beyond.
+          </p>
+        </div>
+        <div class="timeline-entry">
+          <h4>1970s–2017</h4>
+          <p>
+            The house becomes a social hub: weddings, music events, and
+            community employment flourish.
+          </p>
+        </div>
+        <div class="timeline-entry">
+          <h4>1989</h4>
+          <p>
+            Mr Archbold donates a large portion of the property to create the
+            Archbold Tropical Research Center, welcoming universities to conduct
+            tropical research.
+          </p>
+        </div>
+        <div class="timeline-entry">
+          <h4>2017 – Hurricane Maria</h4>
+          <p>
+            Hurricane Maria devastates Dominica, damaging Springfield but
+            marking a new chapter of resilience and renewal.
+          </p>
+        </div>
+        <div class="timeline-entry">
+          <h4>2022 – Restoration with Purpose</h4>
+          <p>
+            Community-led restoration begins, reopening Springfield House as a
+            museum and nature walk for all.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House – Museum &amp; Nature Walk</p>
+    </footer>
+  </body>
+</html>

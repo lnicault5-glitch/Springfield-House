@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Springfield House – Home</title>
+
+    <!-- ✅ Correct Django static reference -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}" class="active">Home</a>
+        <a href="{% url 'visit' %}">Visit</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'art' %}">Art</a>
+        <a href="{% url 'archbold' %}">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <img
+        src="{% static 'museum/images/people.jpg' %}"
+        alt="Springfield community"
+      />
+    </section>
+
+    <section>
+      <h2>Welcome to Springfield House</h2>
+      <p>
+        Welcome to <strong>Springfield House</strong>, a place where history,
+        culture, and nature meet. Built in the 1960s by philanthropist
+        <a href="{% url 'archbold' %}"><strong>John Dana Archbold</strong></a
+        >, the house preserves both its architecture and its stories. Once home
+        to Archbold’s vision of education, equality, and generosity, it remains
+        today a landmark of resilience and community spirit.
+      </p>
+
+      <p>
+        For many years, the adjacent <strong>Springfield Guest House</strong>
+        was a vibrant community place, known for its
+        <strong>classic atmosphere and old-world feel</strong>, while the main
+        house itself was never open to the public. Today, for the first time,
+        Springfield House invites visitors inside to experience its history and
+        heritage.
+      </p>
+
+      <p>
+        Undeniably recognized as one of Dominica’s cultural landmarks,
+        Springfield stands as a symbol of elegance and imagination. Its
+        preservation is of collective importance. Stroll through the gardens,
+        explore the museum, and connect with living history. We invite you to
+        experience the land, meet the people, and help shape its future.
+      </p>
+
+      <section class="principles">
+        <h2>Our Guiding Principles</h2>
+        <ul>
+          <li>
+            <strong>Honor the Past</strong> – We walk with those who came
+            before.
+          </li>
+          <li>
+            <strong>Unite People</strong> – Every culture, every voice, one
+            story.
+          </li>
+          <li>
+            <strong>Protect the Land</strong> – Nature is sacred, we are its
+            stewards.
+          </li>
+          <li>
+            <strong>Inspire Minds</strong> – Curiosity lights the path forward.
+          </li>
+          <li>
+            <strong>Carry the Dream</strong> – What we build today belongs to
+            tomorrow.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Support Springfield Invitation -->
+      <section class="support-invite">
+        <p>
+          Every visit, every story, every seed we plant brings Springfield
+          closer to its future. Help us grow this vision —
+          <a href="{% url 'springfieldforward' %}"
+            >Support Springfield Forward →</a
+          >
+        </p>
+      </section>
+
+      <section class="banner">
+        <img
+          src="{% static 'museum/images/springfield.jpg' %}"
+          alt="Springfield House"
+          class="banner-img"
+        />
+      </section>
+
+      <!-- QR Code Section -->
+      <section class="qr-section">
+        <h2>Scan & Connect</h2>
+        <p>📲 Scan the QR codes or tap the links below:</p>
+
+        <div class="qr">
+          <img
+            src="{% static 'museum/images/springfield_house_qr.png' %}"
+            alt="Website QR Code"
+          />
+          <p>
+            <a href="https://springfieldhouse3.netlify.app" target="_blank"
+              >Website</a
+            >
+          </p>
+        </div>
+
+        <div class="qr">
+          <img
+            src="{% static 'museum/images/springfield_instagram_qr.png' %}"
+            alt="Instagram QR Code"
+          />
+          <p>
+            <a href="https://www.instagram.com/springfield.dom/" target="_blank"
+              >Instagram</a
+            >
+          </p>
+        </div>
+
+        <p class="coming-soon">
+          🔜 More QR codes coming soon for donations & tickets.
+        </p>
+      </section>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House – Museum &amp; Nature Walk</p>
+    </footer>
+  </body>
+</html>

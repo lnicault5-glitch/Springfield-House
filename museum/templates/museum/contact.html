@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Springfield House</title>
+
+    <!-- ✅ Correct static reference -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'visit' %}">Visit</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'art' %}">Art</a>
+        <a href="{% url 'archbold' %}">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Contact</h2>
+
+      <p>
+        📧 <strong>Email:</strong>
+        <a href="mailto:lnicault5@gmail.com">lnicault5@gmail.com</a><br />
+        📷 <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/springfield.dom/" target="_blank"
+          >@springfield.dom</a
+        >
+      </p>
+
+      <p>
+        Springfield House is located on the highway linking the international
+        airport and Roseau — between <strong>Pont Cassé</strong> and
+        <strong>Canefield</strong>. The estate is easily accessible to visitors:
+        parking is available along the roadside, and foot traffic only is
+        allowed inside the gates. We look forward to welcoming you on your
+        visit.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House – Museum &amp; Nature Walk</p>
+    </footer>
+  </body>
+</html>

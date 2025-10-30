@@ -1,0 +1,766 @@
+/* --- Typography System --- */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  color: #2a5d34; /* Springfield green for headers */
+}
+
+blockquote,
+.motto,
+.quote {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  color: #2a5d34;
+}
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+/* --- HEADER --- */
+header {
+  background: #2a5d34; /* Springfield green */
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative; /* allows logo to be positioned independently */
+}
+
+/* --- LOGO --- */
+header .logo-title img {
+  position: absolute;
+  left: 20px; /* logo anchored on the left */
+  top: 50%;
+  transform: translateY(-50%); /* vertical centering */
+  max-height: 130px;
+  width: auto;
+}
+
+/* --- TITLES --- */
+header h1 {
+  font-size: 3em; /* Springfield House */
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+header h2 {
+  font-size: 1.6em; /* Museum & Nature Walk */
+  margin: 0.3em 0 0;
+  font-weight: normal;
+  font-style: italic;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  border-bottom: 3px solid #ffd700; /* gold underline */
+  color: #ffd700;
+  padding-bottom: 3px;
+}
+
+/* --- MOBILE ADAPTATION --- */
+@media (max-width: 700px) {
+  header .logo-title img {
+    position: static; /* remove absolute positioning */
+    transform: none;
+    display: block;
+    margin: 0 auto 10px; /* center logo above text */
+  }
+
+  header h1 {
+    font-size: 2.2em; /* slightly smaller for mobile */
+  }
+
+  header h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  color: #2a5d34;
+}
+
+/* Images (center + framed) */
+section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1em auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* QR code blocks */
+.qr-section {
+  text-align: center;
+  margin: 2em auto;
+  padding: 2em 1em;
+  max-width: 700px;
+  background-color: #eef7f0; /* light green tint */
+  border: 2px solid #2a5d34;
+  border-radius: 10px;
+}
+
+.qr-section h2 {
+  margin-bottom: 1rem;
+}
+
+.qr {
+  display: inline-block;
+  margin: 1em;
+}
+
+.qr img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.qr p {
+  margin-top: 0.5em;
+  font-weight: bold;
+  color: #2a5d34;
+}
+
+.qr a {
+  color: #2a5d34;
+  text-decoration: none;
+}
+
+.qr a:hover {
+  text-decoration: underline;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 2em;
+  padding-left: 1em;
+  border-left: 3px solid #2a5d34;
+}
+
+.timeline-entry {
+  margin-bottom: 1.5em;
+}
+
+.timeline-entry h4 {
+  margin: 0;
+  color: #2a5d34;
+}
+
+.timeline-entry p {
+  margin: 0.2em 0 0 0.5em;
+}
+/* Springfield 1948 Travel Book Section */
+.travelbook {
+  background-color: #fdfcf8;
+  border-left: 5px solid #8c6b4f; /* warm earth tone */
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 6px;
+  max-width: 800px;
+}
+
+.travelbook h2 {
+  color: #2a5d34;
+  margin-bottom: 1rem;
+}
+
+.history-figure {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.history-figure img {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.history-figure figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.travelbook blockquote {
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #333;
+}
+/* Principles / Mantra */
+.principles {
+  background-color: #eef7f0; /* soft green background */
+  border-left: 5px solid #2a5d34;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.principles h2 {
+  text-align: center;
+  color: #2a5d34;
+  margin-bottom: 1rem;
+}
+
+.principles ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.principles li {
+  margin: 1rem 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.principles li strong {
+  color: #2a5d34;
+}
+/* Footer */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #2a5d34;
+  text-decoration: none;
+}
+/* --- Banner Section --- */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust between 50–70vh if needed */
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(75%);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(42, 93, 52, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.banner-overlay h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8em;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    height: 40vh;
+  }
+}
+.archbold-quote blockquote {
+  font-style: italic;
+  font-size: 1.6em; /* larger font size */
+  font-weight: bold; /* makes it stand out */
+  color: #2a5d34; /* uses your Springfield green */
+  border-left: 4px solid #2a5d34;
+  padding-left: 1rem;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+/* --- Archbold Biography Header --- */
+```)  
+to the **end of your `style.css`** file.  
+
+That way it won’t interfere with any of your earlier styles, and it will automatically style the Archbold section you added in `archbold.html`.
+
+---
+
+### So, in summary:
+1. Open `style.css` in VS Code.  
+2. Scroll all the way to the bottom.  
+3. Paste this exact block:
+   ```css
+   /* --- Archbold Biography Header --- */
+   .archbold-hero {
+  display: flex;
+  flex-direction: column; /* stacks photo above text */
+  align-items: center; /* centers everything */
+  justify-content: center;
+  background-color: #f5f5f0; /* soft neutral background */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.archbold-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5rem; /* space below photo */
+}
+
+.archbold-quote h2 {
+  color: #2a5d34; /* Springfield green */
+  font-size: 1.8em;
+  margin-bottom: 0.6rem;
+}
+
+.archbold-quote blockquote {
+  font-style: italic;
+  font-size: 1.6em; /* larger motto */
+  font-weight: bold;
+  color: #2a5d34;
+  margin: 0.5rem auto 0;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Optional subtle gold underline for elegance */
+.archbold-quote blockquote::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background-color: #ffd700; /* gold line */
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+/* --- Archbold Later Years --- */
+.archbold-later {
+  background-color: #fdfcf8;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.archbold-later h3 {
+  color: #2a5d34;
+  font-size: 1.6em;
+  margin-bottom: 1.5rem;
+}
+
+.archbold-later img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.archbold-later figcaption {
+  margin-top: 0.8rem;
+  font-size: 1em;
+  color: #444;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+/* --- Archbold Reflection Quote --- */
+.archbold-reflection {
+  background-color: #eef7f0; /* light green tint */
+  border-left: 5px solid #2a5d34; /* Springfield green accent */
+  padding: 2rem 1.5rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.archbold-reflection blockquote {
+  font-style: italic;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #2a5d34;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+
+.archbold-reflection .quote-credit {
+  font-size: 1em;
+  color: #555;
+  margin-top: 0.5rem;
+}
+/* --- Springfield Forward Page --- */
+.forward-hero {
+  background-color: #2a5d34;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.forward-hero h2 {
+  font-size: 2em;
+  margin-bottom: 0.5rem;
+}
+
+.forward-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.forward-mission,
+.forward-pillars,
+.forward-donate {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.7;
+}
+
+.forward-mission h3,
+.forward-donate h3 {
+  color: #2a5d34;
+  font-size: 1.6em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.forward-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.pillar {
+  background-color: #eef7f0;
+  border-left: 5px solid #2a5d34;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pillar h4 {
+  color: #2a5d34;
+  margin-bottom: 0.5rem;
+}
+
+.forward-donate ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.forward-donate li {
+  margin: 0.6rem 0;
+  font-size: 1.1em;
+}
+
+.donate-button {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #2a5d34;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #f5c518;
+}
+
+.forward-tagline {
+  background-color: #fdfcf8;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.forward-tagline blockquote {
+  font-style: italic;
+  font-size: 1.3em;
+  color: #2a5d34;
+}
+/* --- Support Springfield Invitation --- */
+.support-invite {
+  background-color: #eef7f0; /* soft green background */
+  border-top: 3px solid #2a5d34;
+  border-bottom: 3px solid #2a5d34;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2.5rem;
+}
+
+.support-invite p {
+  font-size: 1.15em;
+  color: #2a5d34;
+  line-height: 1.6;
+}
+
+.support-invite a {
+  color: #ffd700; /* gold */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.support-invite a:hover {
+  text-decoration: underline;
+}
+/* --- Hero Banner (below header) --- */
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  border-bottom: 4px solid #2a5d34; /* Springfield green accent */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 380px; /* adjust height as needed */
+  filter: brightness(96%); /* soft tone to blend with header */
+}
+/* --- Springfield Forward Hero Adjustment --- */
+.forward-hero {
+  background-color: #eef7f0;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 3px solid #2a5d34;
+  margin-top: 0; /* reset any overlap */
+}
+
+header {
+  margin-bottom: 0; /* keep header flush but not overlapping */
+}
+
+.hero-banner + .forward-hero {
+  margin-top: 20px; /* add safe gap if banner exists above */
+}
+/* --- Fix text color only outside the header --- */
+main,
+section,
+.forward-hero,
+.forward-mission,
+.forward-pillars,
+.forward-donate,
+.forward-tagline {
+  color: #333; /* dark text for all main content areas */
+}
+/* --- History Page Bridge (1930s Arrival) --- */
+.history-bridge {
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 0.8rem 1rem 0.8rem 1.2rem;
+  background: #fdfcf8; /* light archival tint */
+  border-left: 3px solid #8c6b4f; /* warm historical accent */
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.history-bridge p {
+  margin: 0;
+  font-style: italic;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #2a5d34;
+}
+/* --- Construction Glimpse --- */
+.construction-glimpse {
+  max-width: 850px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.construction-glimpse img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.construction-glimpse figcaption {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95em;
+  color: #444;
+  background: #fdfcf8;
+  border-left: 3px solid #8c6b4f;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+/* === Springfield House Style Refinement === */
+
+/* --- Global Accent Variable --- */
+:root {
+  --accent-color: #8c6b4f; /* warm heritage tone */
+}
+
+/* --- Section Rhythm --- */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* --- Timeline --- */
+.timeline {
+  margin-top: 2em;
+  padding-left: 1em;
+  border-left: 2px dotted var(--accent-color); /* softened line */
+}
+
+.timeline-entry {
+  margin-bottom: 1.5em;
+}
+
+.timeline-entry h4 {
+  margin: 0;
+  color: #2a5d34;
+}
+
+.timeline-entry p {
+  margin: 0.3em 0 0 0.8em;
+}
+
+/* --- Travel Book Section --- */
+.travelbook {
+  background-color: #fdfcf8;
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  margin: 2.5rem auto;
+  border-radius: 6px;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.travelbook h2 {
+  color: #2a5d34;
+  margin-bottom: 1rem;
+}
+
+.travelbook blockquote {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #2a5d34;
+  background: none; /* less boxed-in */
+}
+
+/* --- History Bridge (Rosita Forbes interlude) --- */
+.history-bridge {
+  max-width: 750px;
+  margin: 2rem auto;
+  padding: 0.6rem 1rem 0.6rem 1.2rem;
+  border-left: 3px solid var(--accent-color);
+  border-radius: 3px;
+}
+
+.history-bridge p {
+  margin: 0;
+  font-style: italic;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #2a5d34;
+}
+
+/* --- Construction Glimpse --- */
+.construction-glimpse {
+  max-width: 850px;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.construction-glimpse img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.5rem;
+}
+
+.construction-glimpse figcaption {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95em;
+  color: #555;
+  border-left: 3px solid var(--accent-color);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  background: none;
+}
+/* --- Springfield 1970 Photo --- */
+.spring1970 {
+  max-width: 850px;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.spring1970 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.6rem;
+}
+
+.spring1970 figcaption {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95em;
+  color: #555;
+  border-left: 3px solid var(--accent-color);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  background: none;
+}

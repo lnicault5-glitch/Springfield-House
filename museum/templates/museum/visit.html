@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visit Springfield House</title>
+
+    <!-- ✅ Proper static CSS link -->
+    <link rel="stylesheet" href="{% static 'museum/style.css' %}" />
+
+    <!-- Local quick styles -->
+    <style>
+      .info-box {
+        background: #eef7f0;
+        border: 2px solid #2a5d34;
+        border-radius: 8px;
+        padding: 1.5em;
+        margin-top: 2em;
+      }
+      .info-box h3 {
+        margin-top: 0;
+        color: #2a5d34;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-title">
+        <img
+          src="{% static 'museum/images/logo.jpg' %}"
+          alt="Springfield House logo"
+        />
+      </div>
+      <div class="title-text">
+        <h1>Springfield House</h1>
+        <h2>Museum & Garden</h2>
+      </div>
+
+      <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'visit' %}" class="active">Visit</a>
+        <a href="{% url 'history' %}">History</a>
+        <a href="{% url 'art' %}">Art</a>
+        <a href="{% url 'archbold' %}">Archbold</a>
+        <a href="{% url 'springfieldforward' %}">Support</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+    </header>
+
+    <section class="visit-intro">
+      <h2>Plan Your Visit</h2>
+      <p>
+        Discover the heritage, stories, and nature surrounding Springfield
+        House. Whether you stop by spontaneously or book a guided tour, your
+        visit supports the preservation of this historic estate and its
+        community legacy.
+      </p>
+    </section>
+
+    <section class="visit-info">
+      <div class="info-block">
+        <h3>📍 Location</h3>
+        <p>
+          Springfield Estate, between Pont Cassé and Canefield, Dominica <br />
+          Easily accessible along the main road from Roseau to the international
+          airport.
+          <a href="https://maps.app.goo.gl/s2QPg5gMMXpNfqJk6" target="_blank"
+            >View on Google Maps →</a
+          >
+        </p>
+      </div>
+
+      <div class="info-block">
+        <h3>🕓 Opening Hours</h3>
+        <p>
+          <strong>Monday – Wednesday:</strong> 10:00 AM – 3:00 PM<br />
+          <strong>Friday – Saturday:</strong> 10:00 AM – 3:00 PM<br />
+          <strong>Thursday & Sunday:</strong> Closed
+        </p>
+      </div>
+
+      <div class="info-block">
+        <h3>💚 Entry & Support</h3>
+        <p>
+          Springfield House operates through visitor support and community
+          contributions.<br />
+          <strong>Entry:</strong> EC$40 per adult <br />
+          <strong>Children (under 15):</strong> Free admission <br />
+          <strong>Resident discounts</strong><br />
+          All contributions help fund restoration, storytelling, and community
+          programs.
+        </p>
+      </div>
+
+      <div class="info-block">
+        <h3>🌿 What to Expect</h3>
+        <ul>
+          <li>Walk through the museum and nature trail</li>
+          <li>Archival photos and local stories</li>
+          <li>Art displays and rotating exhibits</li>
+          <li>Rest areas with mountain and sea views</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>📱 QR Code Access</h3>
+        <p>Scan below to explore stories and timelines during your visit.</p>
+        <img
+          src="{% static 'museum/images/springfield_qr.png' %}"
+          alt="Springfield QR Code"
+          class="qr-code"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Springfield House — Museum & Nature Walk</p>
+    </footer>
+  </body>
+</html>
